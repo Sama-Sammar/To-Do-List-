@@ -1,0 +1,322 @@
+.all {
+    display: flex;
+    background-color: #ffeae5;
+    width: 100%;
+    background-size: cover;
+}
+
+.contains {
+    background-color: #ffeae5;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Fasthand', cursive;
+    font-size: 50px;
+}
+
+.notes {
+    margin-bottom: 50px;
+    height: 90vh;
+}
+
+.note {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    transition: 2s;
+    margin-top: 25px;
+    margin-bottom: 20px;
+
+}
+
+.note h3 {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.icons {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 95px;
+    height: 35px;
+    font-size: 20px;
+    border: 3px double #f3bfb3;
+    top: -35px;
+    left: 29%;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerNotes h6.done {
+    background-color: var(--bs-border-color-translucent);
+}
+
+.icons div.edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    width: 50%;
+    border-right: 3px double #f3bfb3;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+input.done {
+    background-color: rgb(0 0 0 / 0%);
+}
+
+.icons div.delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+.icons div.edit:hover {
+    background-color: #f3bfb3;
+}
+
+.icons div.delete:hover {
+    background-color: #f3bfb3;
+}
+
+.note:hover .icons {
+    display: flex;
+}
+
+p.p_date {
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.bigger {
+    width: 500px;
+    height: 500px;
+}
+
+.fa-solid.fa-expand {
+    cursor: pointer;
+}
+
+.title .add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 35px;
+    background-color: white;
+    text-align: center;
+    padding: 3px;
+    color: purple;
+    font-size: 18px;
+    border: 2px solid purple;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s;
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+.title .add:hover {
+    background-color: purple;
+    color: white;
+}
+
+
+.bigNote {
+    width: 50%;
+    height: 800px;
+    margin-top: 73px;
+    display: none;
+    flex-direction: column;
+    border: 10px dotted white;
+    border-radius: 16px;
+    padding: 3px;
+    margin-right: 20px;
+    background-color: #ffeae5;
+}
+
+@media (max-width:768px) {
+    .all {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contains {
+        position: relative;
+    }
+
+    .bigNote {
+        position: absolute;
+        flex-direction: column;
+        height: 80vh;
+        top: 20px;
+        left: 5%;
+        right: 0;
+        display: none;
+        width: 90%;
+        border: 10px dotted white;
+        border-radius: 16px;
+        padding: 3px;
+        z-index: 9;
+        box-shadow: 0px 8px 8px #888888;
+        background-color: #c39a91;
+    }
+
+}
+
+.bigNote div.title {
+    border-bottom: 2px solid white;
+
+}
+
+.bigNote span.taskTitle {
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-weight: 900;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 39px;
+}
+
+
+.bigNote span i {
+    cursor: pointer;
+}
+
+.innerNotes h6 {
+    width: 100%;
+    background-color: white;
+    padding: 8px;
+    margin-top: 15px;
+    position: relative;
+    font-size: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 3px 3px #888888;
+    transition: 1s;
+    font-family: 'Lora', serif;
+    text-indent: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.date-div {
+    border-top: 1px dashed #c39a91;
+    margin-top: 4px;
+}
+
+.innerNotes h6 span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.innerNotes h6 .fa-regular.fa-circle-check,
+.innerNotes h6 .fa-solid.fa-xmark {
+    position: absolute;
+    right: 75px;
+    top: 12px;
+    cursor: pointer;
+    display: none;
+}
+
+.innerNotes h6 i.fa-solid.fa-trash-can {
+    position: absolute;
+    right: 42px;
+    top: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.innerNotes h6:hover span,
+.innerNotes h6:hover i.fa-solid.fa-trash-can,
+.innerNotes h6:hover .fa-solid.fa-xmark,
+.innerNotes h6:hover .fa-regular.fa-circle-check {
+    display: block;
+}
+
+.innerNotes h6 .fa-regular.fa-circle-check:hover {
+    transform: scale(1.2);
+}
+
+.innerNotes h6 .fa-solid.fa-xmark:hover {
+    transform: scale(1.2);
+}
+
+.innerNotes h6 span:hover {
+    transform: scale(1.2);
+}
+
+.innerNotes h6 i.fa-solid.fa-trash-can:hover {
+    transform: scale(1.2);
+}
+
+.innerNotes h6 div input {
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.icons_inner {
+    background-color: white;
+    width: 95px;
+    height: 35px;
+    font-size: 20px;
+    border: 3px solid #f3bfb3;
+}
+
+.icons_inner .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 3px solid #f3bfb3;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    transition: 1s;
+}
+
+.icons_inner .delete-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    font-size: 25px;
+    transition: 1s;
+}
+
+.icons_inner .delete-icon:hover {
+    background-color: #f3bfb3;
+}
+
+.icons_inner .icon:hover {
+    background-color: #f3bfb3;
+}
+
+.theTasks {
+    font-family: 'Headland One', serif;
+    font-weight: 400;
+}
